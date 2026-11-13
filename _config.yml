@@ -1,0 +1,40 @@
+title: Abdul Akhundzada
+author: Abdul Akhundzada
+email: abdul.akhundzada@outlook.com
+url: https://drakhundov.github.io
+baseurl: ""
+description: >-
+  Computer Engineering at Istanbul Technical University. Machine learning,
+  systems, algorithms and hardware.
+
+remote_theme: riggraz/no-style-please
+
+theme_config:
+  # Colours are handled in assets/css/main.scss; the theme's own dark mode
+  # inverts the whole page, which would turn the link accent orange.
+  appearance: "light"
+  back_home_text: ".."
+  date_format: "%Y-%m-%d"
+  show_description: false
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:slug.html
+
+defaults:
+  - scope:
+      type: notes
+    values:
+      layout: post
+
+sass:
+  style: :compressed
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - README.md

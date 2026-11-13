@@ -1,0 +1,19 @@
+---
+layout: default
+title: notes
+permalink: /notes/
+---
+
+<a href="{{ "/" | relative_url }}">..</a>
+
+<h1>notes</h1>
+
+{%- assign notes = site.notes | sort: "date" | reverse -%}
+<ul>
+  {%- for note in notes -%}
+    <li>
+      <span class="muted">{{ note.date | date: site.theme_config.date_format }}</span>
+      <a href="{{ note.url | relative_url }}">{{ note.title | downcase }}</a>
+    </li>
+  {%- endfor -%}
+</ul>
